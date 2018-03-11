@@ -9,10 +9,7 @@ Commands	Description
 sudo apt-get install python3-pip		
 sudo apt-get install python-pip	Install pip (if you don't already have it)	
 sudo pip install -v awscli -i https://pypi.python.org/simple/	Install the AWS Cli tools required to communicate with AWS	
-sudo aws configure	Access key ID:  AKIAIERFA5HZK7ROXAOQ	
-	Secret access key: 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
-	Region: us-east-1
-	Output: mp3
+sudo aws configure
 sudo pip install -v boto3 -i https://pypi.python.org/simple/	a Python package to interact with AWS	
 sudo apt-get install python-dev	To get pyaudio in the next step to install	
 sudo apt-get update && sudo apt-get upgrade		
