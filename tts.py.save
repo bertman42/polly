@@ -1,0 +1,5 @@
+from polly import Polly
+
+tts = Polly('Matthew')
+tts.saveToFile('Steven Mac Carapiet, you suck and you are also a lazy ass.  Chicken, scared of a little exercise are ya, ya?', 'polly.mp3')
+

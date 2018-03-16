@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Python form submission example</title>
+      <style>
+        form {
+          width: 420px;
+        }
+        div {
+          margin-bottom: 20px;
+        }
+        label {
+          display: inline-block;
+          width: 240px;
+          text-align: right;
+          padding-right: 10px;
+        }
+        button, input {
+          float: right;
+        }
+      </style>
+    </head>
+    <body>
+      <form method="post" action="{{ url_for('hello') }}">
+        <div>
+          <label for="say">What message do you want the PIs to play?</label>
+          <input name="say" id="say" value="Incoming message from the big giant head">
+        </div>
+        <div>
+          <button>Send to the Raspberry Pis</button>
+        </div>
+      </form>
+    </body>
+  </html>
