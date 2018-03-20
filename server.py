@@ -1,5 +1,6 @@
 from polly import Polly
 from subprocess import call
+import time
 
 import socket
 from flask import Flask, render_template, request
@@ -16,10 +17,13 @@ def form():
 def hello():
     message=request.form['say']
     tts = Polly('Matthew')
-    tts.saveToFile(message, 'polly.mp3')
-    call(["omxplayer", "polly.mp3"])
+#    tts.say('Klocwork ')
+    tts.saveToFile(message, 'polly.wav')
+    call(["amixer", "cset numid=3 1"])
+    call(["mplayer", "polly.wav"])
+    time.sleep(1)
 
-    return render_template('greeting.html', say=request.form['say'], to=request.form['sale'])
+    return render_template('greeting.html', say=request.form['say'])
     
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
